@@ -1,0 +1,38 @@
+
+Sentence #1 (9 tokens):
+John does not love his girlfriend, Maria.
+
+Tokens:
+[Text=John CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP]
+[Text=does CharacterOffsetBegin=5 CharacterOffsetEnd=9 PartOfSpeech=VBZ]
+[Text=not CharacterOffsetBegin=10 CharacterOffsetEnd=13 PartOfSpeech=RB]
+[Text=love CharacterOffsetBegin=14 CharacterOffsetEnd=18 PartOfSpeech=VB]
+[Text=his CharacterOffsetBegin=19 CharacterOffsetEnd=22 PartOfSpeech=PRP$]
+[Text=girlfriend CharacterOffsetBegin=23 CharacterOffsetEnd=33 PartOfSpeech=NN]
+[Text=, CharacterOffsetBegin=33 CharacterOffsetEnd=34 PartOfSpeech=,]
+[Text=Maria CharacterOffsetBegin=35 CharacterOffsetEnd=40 PartOfSpeech=NNP]
+[Text=. CharacterOffsetBegin=40 CharacterOffsetEnd=41 PartOfSpeech=.]
+
+Constituency parse: 
+(ROOT
+  (S
+    (NP (NNP John))
+    (VP (VBZ does) (RB not)
+      (VP (VB love)
+        (NP
+          (NP (PRP$ his) (NN girlfriend))
+          (, ,)
+          (NP (NNP Maria)))))
+    (. .)))
+
+
+Dependency Parse (enhanced plus plus dependencies):
+root(ROOT-0, love-4)
+nsubj(love-4, John-1)
+aux(love-4, does-2)
+neg(love-4, not-3)
+nmod:poss(girlfriend-6, his-5)
+dobj(love-4, girlfriend-6)
+punct(girlfriend-6, ,-7)
+appos(girlfriend-6, Maria-8)
+punct(love-4, .-9)
